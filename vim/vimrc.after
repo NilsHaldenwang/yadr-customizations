@@ -1,0 +1,38 @@
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|doc$\|coverage$'
+
+" Make ctrlp stop going upwards on a Gemfile
+let g:ctrlp_root_markers = ['Gemfile', '.git']
+
+" Clear the cache on exit
+" let g:ctrlp_clear_cache_on_exit = 1
+
+" fix this, as it is set to spec before
+let g:ruby_conque_rspec_command='rspec'
+
+" I don't like to search filename only, as it is not unique e.g. for rails
+" views
+let g:ctrlp_by_filename = 0
+
+"Mapping for selecting the latest inserted text
+nmap <silent> <Leader>li `[v`]
+
+" Shortcut to rapidly toggle `set list`
+nmap <Leader>ic :set list!<CR>
+
+"Indent the whole file
+imap <silent> <F5> <Esc> mmgg=G'm
+nmap <silent> <F5> mmgg=G'm
+
+" Change leaderkey
+imap jk <Esc>
+
+" mappings for fugitive
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gw :Gwrite<CR>
+nmap <leader>gr :Gread<CR>
+nmap <leader>gd :Gdiff<CR>
+
+" Wildignores
+set wildignore+=*doc/**
+set wildignore+=*coverage/**
