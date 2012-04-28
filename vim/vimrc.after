@@ -36,6 +36,3 @@ nmap <leader>gd :Gdiff<CR>
 " Wildignores
 set wildignore+=*doc/**
 set wildignore+=*coverage/**
-
-Arpeggio nunmap jk $
-Arpeggio nunmap fd 0
